@@ -25,14 +25,6 @@ public class DBSetupInsert {
     //insert food into database---------------*/
     public void insertAllFood(){
         setupInsertFood("Null,'Egg, whole, cooked, hard-boiled', 'Prior', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
-        setupInsertFood("Null,'chuoi','', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
-        setupInsertFood("Null,'Egg, whole, cooked, hard-boiled', 'Prior', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
-        setupInsertFood("Null,'Egg, whole, cooked, hard-boiled', 'Prior', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
-        setupInsertFood("Null,'Egg, whole, cooked, hard-boiled', 'Prior', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
-        setupInsertFood("Null,'Egg, whole, cooked, hard-boiled', 'Prior', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
-        setupInsertFood("Null,'Egg, whole, cooked, hard-boiled', 'Prior', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
-        setupInsertFood("Null,'Egg, whole, cooked, hard-boiled', 'Prior', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
-        setupInsertFood("Null,'Egg, whole, cooked, hard-boiled', 'Prior', '13','gram','2','wtf','232','23','23','23','232','23','23','23','1','1','1','1','1','1','1','1'");
     }
 
     //insert in to category table
