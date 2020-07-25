@@ -10,7 +10,7 @@ import android.util.Log;
 public class DBAdapter {
     /* 01 Variable-------------------**/
     private static final String databaseName = "diet1";
-    private  static final  int databaseVersion = 9;
+    private  static final  int databaseVersion = 10;
 
     /* 02 Database Variable ---------**/
     private final Context context;

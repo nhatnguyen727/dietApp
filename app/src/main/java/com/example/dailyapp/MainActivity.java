@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*Sletho---------------------------------*/
+        /*Stetho---------------------------------*/
         Stetho.initializeWithDefaults(this);
         new OkHttpClient.Builder()
                 .addNetworkInterceptor(new StethoInterceptor())
@@ -33,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         if(numberRows<1){
             DBSetupInsert dbSetupInsert = new DBSetupInsert(this);
-            dbSetupInsert.insertAllFood();
             dbSetupInsert.insertAllCategory();
+            dbSetupInsert.insertAllFood();
         }
+
 
         /*Close Database*/
         db.close();
