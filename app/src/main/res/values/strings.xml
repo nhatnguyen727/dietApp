@@ -16,7 +16,7 @@
 
     <string name="activity">Activity level</string>
     <string-array name="activity_array">
-        <item name="little to no exercise">little to no exercise</item>
+        <item name="Little to no exercise">little to no exercise</item>
         <item name="Light exercise (1-3 days per week)">Light exercise (1-3 days per week)</item>
         <item name="Moderate exercise (3-5 days per week)">Moderate exercise (3-5 days per week)</item>
         <item name="Heavy exercise (6-7 days per week)">Heavy exercise (6-7 days per week)</item>
@@ -40,7 +40,7 @@
         <item name="February">February</item>
         <item name="March">March</item>
         <item name="April">April</item>
-        <item name="May">YeMayar</item>
+        <item name="May">May</item>
         <item name="June">June</item>
         <item name="July">July</item>
         <item name="August">August</item>

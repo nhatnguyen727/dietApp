@@ -10,7 +10,7 @@ import android.util.Log;
 public class DBAdapter {
     /* 01 Variable-------------------**/
     private static final String databaseName = "diet1";
-    private  static final  int databaseVersion = 12;
+    private  static final  int databaseVersion = 16;
 
     /* 02 Database Variable ---------**/
     private final Context context;
@@ -48,6 +48,7 @@ public class DBAdapter {
                         " user_weight INT, "+
                         " user_taget_weight INT, "+
                         " user_target_weight_level INT, "+
+                        " user_measurement VARCHAR, "+
                         " user_last_seen TIME , "+
                         " user_note VARCHAR);");
 
@@ -120,6 +121,7 @@ public class DBAdapter {
             db.execSQL("DROP TABLE IF EXISTS food_diary");
             db.execSQL("DROP TABLE IF EXISTS food ");
             db.execSQL("DROP TABLE IF EXISTS category ");
+            db.execSQL("DROP TABLE IF EXISTS users ");
             onCreate(db);
 
             String TAG= "Tag";
@@ -139,7 +141,39 @@ public class DBAdapter {
         DBHelper.close();
     }
 
-    /* 07 insert data */
+    /*07  public String quoteSmart---------------------------------*/
+    public String quoteSmart(String value) {
+        //Is numeric?
+        boolean isNumeric = false;
+        try {
+            double myDouble = Double.parseDouble(value);
+            isNumeric = true;
+        } catch (NumberFormatException nfe) {
+            System.out.println("Could not parse" + nfe);
+        }
+        if (isNumeric == false) {
+            //Escapes special character in a String for use is an SQL statement
+            if (value != null && value.length() > 0) {
+                value = value.replace("\\", "\\\\");
+                value = value.replace("'", "\\'");
+                value = value.replace("\0", "\\0");
+                value = value.replace("\n", "\\n");
+                value = value.replace("\r", "\\r");
+                value = value.replace("\"", "\\\"");
+                value = value.replace("\\x1a", "\\Z");
+            }
+        }
+        value = "'" + value + "'";
+        return value;
+    }
+    public double quoteSmart(double value){
+        return value;
+    }
+
+    public int quoteSmart(int value){
+        return value;
+    }
+    /* 08 insert data */
     public  void insert(String table, String field, String values){
         db.execSQL("INSERT INTO "+ table + "(" +field + ") VALUES (" + values + ")");
     }
